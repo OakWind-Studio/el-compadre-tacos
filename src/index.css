@@ -278,3 +278,95 @@ button {
 .featured-card-img img {
   transition: transform 0.5s ease;
 }
+
+/* Scroll indicator bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 76px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  animation: bounce 2.2s ease-in-out infinite;
+  color: rgba(255, 245, 230, 0.45);
+  display: block;
+  transition: color 0.2s;
+}
+.scroll-indicator:hover {
+  color: rgba(255, 245, 230, 0.8);
+}
+
+/* Hero floating food card — desktop only */
+@media (max-width: 1020px) {
+  .hero-food-card { display: none !important; }
+}
+
+/* Featured dish grid — tablet + mobile stack */
+@media (max-width: 768px) {
+  .featured-dish-grid { grid-template-columns: 1fr !important; }
+  .featured-dish-grid .featured-card-img { height: 260px !important; }
+}
+
+/* Why section icon boxes */
+.why-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Reviewer avatar */
+.reviewer-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-accent);
+  color: white;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+}
+
+/* Menu tab item entrance animation — fires on every render, no observer needed */
+@keyframes menuItemIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Photo gallery reel */
+.photo-reel {
+  display: flex;
+  width: max-content;
+  animation: ticker 55s linear infinite;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.photo-reel:hover {
+  animation-play-state: paused;
+}
+
+/* Prefers-reduced-motion — accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .observe-fade {
+    transition: opacity 0.01ms !important;
+    transform: none !important;
+  }
+  .ticker-track { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+  .hero-animate-1, .hero-animate-2, .hero-animate-3,
+  .hero-animate-4, .hero-animate-5 {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+  }
+  .float-anim, .open-dot, .scroll-indicator { animation: none !important; }
+  @keyframes menuItemIn { from { opacity: 1; transform: none; } }
+  .card-lift { transition: none !important; }
+}

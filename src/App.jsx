@@ -12,120 +12,123 @@ const MENU_CATEGORIES = [
     id: 'wings',
     label: 'Wings & Fries',
     items: [
-      { name: 'Mango Habanero Wings', desc: 'Sweet meets heat. Our most-talked-about item — crispy wings tossed in house mango habanero sauce. Served with fries, ranch, celery, and carrots.', popular: true },
-      { name: 'Classic Wings', desc: 'Crispy fried wings with your choice of sauce. Served with fries and ranch.' },
-      { name: 'Asada Loaded Fries', desc: 'The legend. Seasoned fries piled with steak, Monterey Jack, chorizo, beans, guacamole, and pico.', popular: true },
-      { name: 'Crispy Fries', desc: 'Golden, seasoned fries. Perfect on their own.' },
+      { name: 'Mango Habanero Wings', desc: 'Sweet meets heat. Our most-talked-about item — crispy wings tossed in house mango habanero sauce. Served with fries, ranch, celery, and carrots.', popular: true, price: '$14.99' },
+      { name: 'Lemon Pepper Wings', desc: 'Crispy wings tossed in zesty lemon pepper. A crowd favorite — served with fries and ranch.', price: '$13.99' },
+      { name: 'Buffalo Wings', desc: 'Classic crispy wings in your choice of mild or hot buffalo sauce. Served with fries and ranch.', price: '$13.99' },
+      { name: 'Asada Loaded Fries', desc: 'The legend. Seasoned fries piled with steak, Monterey Jack, chorizo, beans, guacamole, and pico.', popular: true, price: '$15.99' },
+      { name: 'Crispy Fries', desc: 'Golden, seasoned fries. Perfect on their own.', price: '$3.99' },
     ]
   },
   {
     id: 'tacos',
     label: 'Tacos',
     items: [
-      { name: 'Carne Asada', desc: 'Tender, seasoned chopped steak on freshly made flour tortillas. The reason regulars come back every single day.', popular: true },
-      { name: 'Carnitas', desc: 'Slow-cooked, crispy-edged pork carnitas with salsa verde and fresh cilantro.' },
-      { name: 'Al Pastor', desc: 'Marinated pork with pineapple, achiote, and our house pastor salsa.' },
-      { name: 'Chicken', desc: 'Seasoned grilled chicken, soft and flavorful.' },
-      { name: 'Tripas', desc: 'Crispy beef tripe — authentic, beloved by regulars from the border.' },
-      { name: 'Chicharrón', desc: 'Pork rind braised in red salsa. Comforting and rich.' },
-      { name: 'Barbacoa', desc: 'Slow-cooked, tender beef cheek — weekend special.' },
-      { name: 'Cabeza', desc: 'Beef head meat — melt-in-your-mouth and deeply flavorful.' },
-      { name: 'Shrimp', desc: 'Sautéed shrimp with garlic, butter, and a touch of lime.' },
-      { name: 'Fish', desc: 'Lightly seasoned fried fish with crema and cabbage slaw.' },
-      { name: 'Salmon', desc: 'Grilled salmon taco — elevated, delicate, and fresh.' },
-      { name: 'Lobster', desc: 'Premium. A true taco upgrade — ask about availability.' },
+      { name: 'Carne Asada', desc: 'Tender, seasoned chopped steak on freshly made flour tortillas. The reason regulars come back every single day.', popular: true, price: '$4.50 ea.' },
+      { name: 'Carnitas', desc: 'Slow-cooked, crispy-edged pork carnitas with salsa verde and fresh cilantro.', price: '$4.25 ea.' },
+      { name: 'Al Pastor', desc: 'Marinated pork with pineapple, achiote, and our house pastor salsa.', price: '$4.25 ea.' },
+      { name: 'Chicken', desc: 'Seasoned grilled chicken, soft and flavorful.', price: '$3.99 ea.' },
+      { name: 'Tripas', desc: 'Crispy beef tripe — authentic, beloved by regulars from the border.', price: '$3.99 ea.' },
+      { name: 'Chicharrón', desc: 'Pork rind braised in red salsa. Comforting and rich.', price: '$3.99 ea.' },
+      { name: 'Barbacoa', desc: 'Slow-cooked, tender beef cheek — weekend special.', price: '$4.50 ea.', tag: 'WEEKEND' },
+      { name: 'Cabeza', desc: 'Beef head meat — melt-in-your-mouth and deeply flavorful.', price: '$4.50 ea.' },
+      { name: 'Birria', desc: 'Slow-braised beef in rich chile broth — juicy, tender, served with consommé for dipping.', popular: true, price: '$4.99 ea.' },
+      { name: 'Quesabirria', desc: 'Birria tacos pressed with melted cheese on the griddle, dipped in consommé. The one everyone is talking about.', price: '$5.99 ea.' },
+      { name: 'Shrimp', desc: 'Sautéed shrimp with garlic, butter, and a touch of lime.', price: '$4.99 ea.' },
+      { name: 'Fish', desc: 'Lightly seasoned fried fish with crema and cabbage slaw.', price: '$4.75 ea.' },
     ]
   },
   {
     id: 'breakfast',
     label: 'Breakfast',
     items: [
-      { name: 'Chipaquiles Rojos', desc: 'Crispy tortillas bathed in our house red salsa, topped with cheese, crema, and your choice of protein.' },
-      { name: 'Chipaquiles Verdes', desc: 'Same crispy base, bright tomatillo green salsa, fresh crema, and melted cheese.' },
-      { name: 'Chipaquiles Mixtos', desc: 'Half red, half green — the best of both worlds. Our most-recommended breakfast.', popular: true },
-      { name: 'VIP Breakfast', desc: "Some of the fluffiest pancakes you've ever tasted, served with eggs and your choice of sides." },
-      { name: 'Breakfast Tacos', desc: 'Fluffy scrambled eggs, cheese, and your choice of protein on a warm flour tortilla.' },
-      { name: 'Platillos de Huevos', desc: 'Classic egg plates — rancheros, a la mexicana, scrambled — served with rice and beans.' },
-      { name: 'Café de Olla', desc: 'Traditional Mexican coffee brewed with molasses, cinnamon, and anise. A cozy ritual.' },
+      { name: 'Chipaquiles Rojos', desc: 'Crispy tortillas bathed in our house red salsa, topped with cheese, crema, and your choice of protein.', price: '$11.99' },
+      { name: 'Chipaquiles Verdes', desc: 'Same crispy base, bright tomatillo green salsa, fresh crema, and melted cheese.', price: '$11.99' },
+      { name: 'Chipaquiles Mixtos', desc: 'Half red, half green — the best of both worlds. Our most-recommended breakfast.', popular: true, price: '$13.99' },
+      { name: 'VIP Breakfast', desc: "Some of the fluffiest pancakes you've ever tasted, served with eggs and your choice of sides.", popular: true, price: '$13.99' },
+      { name: 'Breakfast Tacos', desc: 'Fluffy scrambled eggs, cheese, and your choice of protein on a warm flour tortilla.', price: '$3.75 ea.' },
+      { name: 'Platillos de Huevos', desc: 'Classic egg plates — rancheros, a la mexicana, scrambled — served with rice and beans.', price: '$10.99' },
+      { name: 'Menudo', desc: 'Traditional slow-simmered tripe soup in a rich red chile broth. Served weekends — the real deal.', price: '$11.99', tag: 'WEEKEND' },
+      { name: 'Café de Olla', desc: 'Traditional Mexican coffee brewed with molasses, cinnamon, and anise. A cozy ritual.', price: '$3.99' },
     ]
   },
   {
     id: 'plates',
     label: 'Plates & Entrees',
     items: [
-      { name: 'Asada Loaded Fries', desc: 'Our most-ordered item. Seasoned fries topped with chopped steak, Monterey Jack, chorizo, refried beans, salsa Colorado, sour cream, guacamole, and pico de gallo.', popular: true },
-      { name: 'Milanesa', desc: 'Breaded steak served with crispy fries and homemade guacamole.' },
-      { name: 'Chile Rellenos', desc: 'Pasilla peppers stuffed with Monterey Jack cheese, bathed in salsa ranchera.' },
-      { name: 'Enchiladas', desc: 'Rolled tortillas filled with chicken, beef, or cheese — your choice of red or green salsa.' },
-      { name: 'Taquitos', desc: 'Crispy rolled tacos topped with shredded cheese, sour cream, and guacamole.' },
-      { name: 'Chimichangas', desc: 'Deep-fried burrito with your choice of filling, served with rice and beans.' },
-      { name: 'Tamales', desc: 'Handmade masa filled with chicken, beef, or rajas con queso. Made the traditional way.' },
-      { name: 'Fajitas', desc: 'Sizzling steak or chicken with peppers, onions, and all the fixings.' },
-      { name: 'Carne Guisada', desc: 'Tender steak simmered in a rich vegetable-tomato sauce.' },
-      { name: 'Chile Verde', desc: 'Pork slow-cooked in tomatillo green chile sauce.' },
-      { name: 'Chile Colorado', desc: 'Pork simmered in dried red chile — deep, smoky, and satisfying.' },
-      { name: 'Carnitas Plate', desc: 'Full plate of slow-cooked carnitas with rice, beans, and tortillas.' },
-      { name: 'Bistec Ranchero', desc: 'NY strip steak in a vibrant Spanish salsa with peppers and tomatoes.' },
-      { name: 'Lengua en Salsa', desc: 'Beef tongue braised to tenderness in house salsa. A traditional favorite.' },
-      { name: 'Mole de Pollo', desc: 'Chicken served in our special mole sauce — complex, rich, and worth every bite.' },
+      { name: 'Asada Loaded Fries', desc: 'Our most-ordered item. Seasoned fries topped with chopped steak, Monterey Jack, chorizo, refried beans, salsa Colorado, sour cream, guacamole, and pico de gallo.', popular: true, price: '$15.99' },
+      { name: 'Milanesa', desc: 'Breaded steak served with crispy fries and homemade guacamole.', price: '$14.99' },
+      { name: 'Chile Rellenos', desc: 'Pasilla peppers stuffed with Monterey Jack cheese, bathed in salsa ranchera.', price: '$13.99' },
+      { name: 'Enchiladas', desc: 'Rolled tortillas filled with chicken, beef, or cheese — your choice of red or green salsa.', price: '$12.99' },
+      { name: 'Taquitos', desc: 'Crispy rolled tacos topped with shredded cheese, sour cream, and guacamole.', price: '$11.99' },
+      { name: 'Chimichangas', desc: 'Deep-fried burrito with your choice of filling, served with rice and beans.', price: '$13.99' },
+      { name: 'Tamales', desc: 'Handmade masa filled with chicken, beef, or rajas con queso. Made the traditional way.', price: '$12.99' },
+      { name: 'Fajitas', desc: 'Sizzling steak or chicken with peppers, onions, and all the fixings.', price: '$16.99' },
+      { name: 'Carne Guisada', desc: 'Tender steak simmered in a rich vegetable-tomato sauce.', price: '$13.99' },
+      { name: 'Chile Verde', desc: 'Pork slow-cooked in tomatillo green chile sauce.', price: '$13.99' },
+      { name: 'Chile Colorado', desc: 'Pork simmered in dried red chile — deep, smoky, and satisfying.', price: '$13.99' },
+      { name: 'Carnitas Plate', desc: 'Full plate of slow-cooked carnitas with rice, beans, and tortillas.', price: '$14.99' },
+      { name: 'Bistec Ranchero', desc: 'NY strip steak in a vibrant Spanish salsa with peppers and tomatoes.', price: '$17.99' },
+      { name: 'Lengua en Salsa', desc: 'Beef tongue braised to tenderness in house salsa. A traditional favorite.', price: '$14.99' },
+      { name: 'Mole de Pollo', desc: 'Chicken served in our special mole sauce — complex, rich, and worth every bite.', price: '$14.99' },
     ]
   },
   {
     id: 'burritos',
     label: 'Burritos',
     items: [
-      { name: 'Carne Asada Burrito', desc: 'Tender asada, rice, beans, and salsa wrapped in a warm flour tortilla.' },
-      { name: 'Shrimp & Rice Burrito', desc: 'Sautéed shrimp, rice, beans, and crema — a crowd favorite.' },
-      { name: 'Carnitas Burrito', desc: 'Slow-cooked pork carnitas with all the fixings.' },
-      { name: 'Al Pastor Burrito', desc: 'Marinated pastor with pineapple, rice, and beans.' },
-      { name: 'Bean & Cheese Burrito', desc: 'Simple, satisfying, and classic. Refried beans and melted cheese.' },
-      { name: 'Veggie Burrito', desc: 'Roasted vegetables, rice, beans, guacamole, and salsa.' },
+      { name: 'Carne Asada Burrito', desc: 'Tender asada, rice, beans, and salsa wrapped in a warm flour tortilla.', price: '$12.99' },
+      { name: 'Shrimp & Rice Burrito', desc: 'Sautéed shrimp, rice, beans, and crema — a crowd favorite.', price: '$13.99' },
+      { name: 'Carnitas Burrito', desc: 'Slow-cooked pork carnitas with all the fixings.', price: '$12.99' },
+      { name: 'Al Pastor Burrito', desc: 'Marinated pastor with pineapple, rice, and beans.', price: '$12.99' },
+      { name: 'Bean & Cheese Burrito', desc: 'Simple, satisfying, and classic. Refried beans and melted cheese.', price: '$8.99' },
+      { name: 'Veggie Burrito', desc: 'Roasted vegetables, rice, beans, guacamole, and salsa.', price: '$10.99' },
     ]
   },
   {
     id: 'burgers',
     label: 'Burgers & Sandwiches',
     items: [
-      { name: 'Cheeseburger', desc: 'Classic smash-style cheeseburger on a toasted bun, with fries.' },
-      { name: 'Double Meat Burger', desc: 'Double the beef, double the satisfaction. Fully loaded.' },
-      { name: 'Hamburger', desc: 'Simple, classic, done right.' },
-      { name: 'BLT', desc: 'Bacon, lettuce, tomato on toasted bread — with fries.' },
-      { name: 'Turkey Club', desc: 'Triple-decker turkey club with the works.' },
-      { name: 'Grilled Cheese', desc: 'Buttery, melty, perfect comfort food.' },
+      { name: 'Cheeseburger', desc: 'Classic smash-style cheeseburger on a toasted bun, with fries.', price: '$10.99' },
+      { name: 'Double Meat Burger', desc: 'Double the beef, double the satisfaction. Fully loaded.', price: '$12.99' },
+      { name: 'Hamburger', desc: 'Simple, classic, done right.', price: '$9.99' },
+      { name: 'BLT', desc: 'Bacon, lettuce, tomato on toasted bread — with fries.', price: '$9.99' },
+      { name: 'Turkey Club', desc: 'Triple-decker turkey club with the works.', price: '$11.99' },
+      { name: 'Grilled Cheese', desc: 'Buttery, melty, perfect comfort food.', price: '$7.99' },
     ]
   },
   {
     id: 'sides',
     label: 'Sides',
     items: [
-      { name: 'Mexican Rice', desc: 'Fluffy tomato rice with herbs — the perfect companion.' },
-      { name: 'Refried Beans', desc: 'Creamy house-made refried beans or whole beans.' },
-      { name: 'Elote', desc: 'Mexican street corn with crema, cotija, and chili powder.' },
-      { name: 'Homemade Guacamole', desc: 'Fresh, chunky, made in-house. The real deal.' },
-      { name: 'Queso', desc: 'Warm, melted cheese dip with house salsa.' },
-      { name: 'Gorditas de Chicharrón', desc: "Handmade masa pockets stuffed with crispy chicharrón. Homemade, just like abuela's.", popular: true },
+      { name: 'Mexican Rice', desc: 'Fluffy tomato rice with herbs — the perfect companion.', price: '$3.99' },
+      { name: 'Refried Beans', desc: 'Creamy house-made refried beans or whole beans.', price: '$3.99' },
+      { name: 'Elote', desc: 'Mexican street corn with crema, cotija, and chili powder.', price: '$5.99' },
+      { name: 'Homemade Guacamole', desc: 'Fresh, chunky, made in-house. The real deal.', price: '$4.99' },
+      { name: 'Queso', desc: 'Warm, melted cheese dip with house salsa.', price: '$4.99' },
+      { name: 'Gorditas de Chicharrón', desc: "Handmade masa pockets stuffed with crispy chicharrón. Homemade, just like abuela's.", popular: true, price: '$5.99' },
     ]
   },
   {
     id: 'drinks',
     label: 'Drinks & Desserts',
     items: [
-      { name: 'Horchata', desc: 'House-made cinnamon rice milk. Cool, creamy, and refreshing.' },
-      { name: 'Jamaica', desc: 'Hibiscus flower agua fresca — sweet, tart, and vibrant.' },
-      { name: 'Tamarindo', desc: 'Tangy tamarind agua fresca — uniquely satisfying.' },
-      { name: 'Café de Olla', desc: 'Traditional Mexican coffee with molasses, cinnamon, and anise.' },
-      { name: 'Shakes', desc: "Ask your server for today's flavors." },
-      { name: 'Tres Leches Cake', desc: 'Light sponge cake soaked in three milks — rich, sweet, and worth saving room for.' },
+      { name: 'Horchata', desc: 'House-made cinnamon rice milk. Cool, creamy, and refreshing.', price: '$3.99' },
+      { name: 'Jamaica', desc: 'Hibiscus flower agua fresca — sweet, tart, and vibrant.', price: '$3.99' },
+      { name: 'Tamarindo', desc: 'Tangy tamarind agua fresca — uniquely satisfying.', price: '$3.99' },
+      { name: 'Café de Olla', desc: 'Traditional Mexican coffee with molasses, cinnamon, and anise.', price: '$3.99' },
+      { name: 'Shakes', desc: "Ask your server for today's flavors.", price: '$5.99' },
+      { name: 'Tres Leches Cake', desc: 'Light sponge cake soaked in three milks — rich, sweet, and worth saving room for.', popular: true, price: '$5.99' },
+      { name: 'Sopapillas', desc: 'Light, airy fried dough dusted with cinnamon sugar. A sweet finish to any meal.', price: '$5.99' },
     ]
   },
   {
     id: 'kids',
     label: 'Kids Menu',
     items: [
-      { name: "Kid's Taco", desc: 'One taco on a flour tortilla with mild toppings. For 12 and under.' },
-      { name: "Kid's Quesadilla", desc: 'Cheese quesadilla, crispy and simple. Kids love it.' },
-      { name: 'Bean & Cheese Burrito', desc: 'A classic mild burrito — perfectly sized for little ones.' },
-      { name: 'Cheese Enchilada', desc: 'Mild red sauce, melted cheese, and a happy kid.' },
+      { name: "Kid's Taco", desc: 'One taco on a flour tortilla with mild toppings. For 12 and under.', price: '$5.99' },
+      { name: "Kid's Quesadilla", desc: 'Cheese quesadilla, crispy and simple. Kids love it.', price: '$6.99' },
+      { name: 'Bean & Cheese Burrito', desc: 'A classic mild burrito — perfectly sized for little ones.', price: '$6.99' },
+      { name: 'Cheese Enchilada', desc: 'Mild red sauce, melted cheese, and a happy kid.', price: '$6.99' },
     ]
   },
 ]
@@ -326,7 +329,18 @@ function Nav() {
                   {l.label}
                 </a>
               ))}
-              <a href="tel:+18173865820" style={{
+              <a href="#order" style={{
+                background: 'var(--gold)', color: 'var(--brown)',
+                padding: '0.45rem 1.1rem', borderRadius: '9999px',
+                fontSize: '0.82rem', fontWeight: 700,
+                display: 'flex', alignItems: 'center', gap: '0.35rem',
+                whiteSpace: 'nowrap', transition: 'all 0.2s',
+              }}
+                onMouseEnter={e => e.currentTarget.style.background = 'var(--gold-light)'}
+                onMouseLeave={e => e.currentTarget.style.background = 'var(--gold)'}>
+                Order Now
+              </a>
+              <a className="nav-phone-cta" href="tel:+18173865820" style={{
                 background: 'var(--red)', color: 'white',
                 padding: '0.45rem 1.1rem', borderRadius: '9999px',
                 fontSize: '0.82rem', fontWeight: 600,
@@ -365,6 +379,7 @@ function Nav() {
       </div>
       <style>{`
         @media (min-width: 768px) { .nav-desktop { display: flex !important; } .nav-mobile-btn { display: none !important; } }
+        @media (min-width: 768px) and (max-width: 1023px) { .nav-phone-cta { display: none !important; } .nav-desktop > div { gap: 1.25rem !important; } }
         @media (max-width: 767px) { .nav-mobile-btn { display: block !important; } }
       `}</style>
     </nav>
@@ -493,6 +508,55 @@ function Hero() {
         </div>
       </div>
 
+      {/* Floating food card — desktop only via CSS */}
+      <div className="hero-food-card" style={{
+        position: 'absolute', right: '6%', top: '50%', zIndex: 4,
+        transform: 'translateY(-45%)',
+      }}>
+        <div style={{
+          width: '268px',
+          background: 'white', borderRadius: '1.5rem', overflow: 'hidden',
+          boxShadow: '0 32px 72px rgba(44,24,16,0.6)',
+          border: '2px solid rgba(232,168,56,0.55)',
+          animation: 'float 4s ease-in-out infinite',
+        }}>
+          <div style={{ position: 'relative', height: '175px', overflow: 'hidden' }}>
+            <img
+              src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=540&q=85&fit=crop&crop=center"
+              alt="Asada Loaded Fries — El Compadre's #1 dish"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{
+              position: 'absolute', top: '0.75rem', left: '0.75rem',
+              background: 'var(--gold)', color: 'var(--brown)',
+              fontFamily: 'var(--font-accent)', fontSize: '0.62rem', letterSpacing: '0.14em',
+              padding: '0.2rem 0.65rem', borderRadius: '9999px',
+              boxShadow: '0 3px 10px rgba(232,168,56,0.45)',
+            }}>
+              #1 MOST ORDERED
+            </div>
+          </div>
+          <div style={{ padding: '1rem 1.1rem 0.875rem' }}>
+            <div style={{
+              fontFamily: 'var(--font-display)', color: 'var(--brown)',
+              fontSize: '1.1rem', lineHeight: 1.2, marginBottom: '0.5rem',
+            }}>
+              Asada Loaded Fries
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <Stars count={5} size={11} />
+              <span style={{ fontSize: '0.72rem', color: 'var(--brown-mid)' }}>280+ five-star reviews</span>
+            </div>
+          </div>
+          <div style={{ height: '3px', background: 'linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark))' }} />
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <a href="#menu" className="scroll-indicator" aria-label="Scroll to menu">
+        <ChevronDown size={30} />
+      </a>
+
       <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 3 }}>
         <WaveDown fill="var(--cream)" bg="transparent" />
       </div>
@@ -543,6 +607,125 @@ function SocialProofTicker() {
   )
 }
 
+/* ─── Why Section ────────────────────────────────────────── */
+function WhySection() {
+  const features = [
+    {
+      icon: Flame,
+      title: 'Made Fresh Daily',
+      desc: 'Tortillas, gorditas, guacamole — everything crafted in-house, every single morning.',
+      iconColor: 'var(--red)',
+      bg: 'rgba(181,40,30,0.08)', border: 'rgba(181,40,30,0.18)',
+    },
+    {
+      icon: Heart,
+      title: 'Family-Owned & Run',
+      desc: "The owners are here every day. You'll feel the care in every single plate.",
+      iconColor: 'var(--gold-dark)',
+      bg: 'rgba(232,168,56,0.1)', border: 'rgba(232,168,56,0.28)',
+    },
+    {
+      icon: Star,
+      title: '4.8 Stars · 280+ Reviews',
+      desc: "Fort Worth's most-loved taqueria — backed by hundreds of five-star regulars.",
+      iconColor: 'var(--green)',
+      bg: 'rgba(26,71,49,0.08)', border: 'rgba(26,71,49,0.18)',
+    },
+    {
+      icon: Sparkles,
+      title: 'Authentic Recipes',
+      desc: 'Traditional flavors, time-honored techniques, and ingredients that never cut corners.',
+      iconColor: 'var(--red)',
+      bg: 'rgba(181,40,30,0.07)', border: 'rgba(181,40,30,0.14)',
+    },
+  ]
+
+  return (
+    <section style={{ background: 'var(--cream)', padding: '3.5rem 1.5rem 2.5rem', borderBottom: '1px solid rgba(44,24,16,0.07)' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2.25rem' }}>
+          {features.map((f, i) => {
+            const Icon = f.icon
+            return (
+              <div key={f.title} className={`observe-fade delay-${i + 1}`} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+                <div className="why-icon-box" style={{ background: f.bg, border: `1px solid ${f.border}` }}>
+                  <Icon size={22} style={{ color: f.iconColor }} />
+                </div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-display)', color: 'var(--brown)', fontSize: '1rem', marginBottom: '0.3rem', lineHeight: 1.2 }}>
+                    {f.title}
+                  </div>
+                  <p style={{ color: 'var(--brown-mid)', fontSize: '0.83rem', lineHeight: 1.65 }}>
+                    {f.desc}
+                  </p>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Food Photo Gallery ─────────────────────────────────── */
+function PhotoGallery() {
+  const photos = [
+    { src: 'https://s3-media0.fl.yelpcdn.com/bphoto/H8QYbMSUwe79URPat97Pwg/l.jpg', caption: 'Fresh Tacos', tag: 'FROM OUR KITCHEN' },
+    { src: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&q=85&fit=crop', caption: 'Asada Loaded Fries', tag: '#1 MOST ORDERED' },
+    { src: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=500&q=80&fit=crop', caption: 'Mango Habanero Wings', tag: 'VIRAL ON TIKTOK' },
+    { src: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80&fit=crop', caption: 'Carne Asada Tacos', tag: 'DAILY FAVORITE' },
+    { src: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=500&q=80&fit=crop', caption: 'Chipaquiles Mixtos', tag: 'BREAKFAST STAR' },
+    { src: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=500&q=80&fit=crop', caption: 'Gorditas de Chicharrón', tag: 'HANDMADE DAILY' },
+  ]
+  const doubled = [...photos, ...photos]
+
+  return (
+    <section style={{ background: 'var(--cream)', overflow: 'hidden', padding: '2.5rem 0 3rem' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem 1.25rem' }}>
+        <div className="observe-fade" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <p style={{ fontFamily: 'var(--font-accent)', color: 'var(--red)', fontSize: '0.82rem', letterSpacing: '0.2em', whiteSpace: 'nowrap' }}>
+            FROM OUR KITCHEN
+          </p>
+          <div style={{ flex: 1, height: '1px', background: 'rgba(44,24,16,0.12)' }} />
+          <p style={{ color: 'var(--brown-mid)', fontSize: '0.78rem', whiteSpace: 'nowrap' }}>Hover to pause</p>
+        </div>
+      </div>
+      <div style={{ overflow: 'hidden' }}>
+        <div className="photo-reel">
+          {doubled.map((p, i) => (
+            <div key={i} style={{
+              width: '230px', flexShrink: 0,
+              borderRadius: '1rem', overflow: 'hidden',
+              boxShadow: '0 6px 24px rgba(44,24,16,0.13)',
+              border: '2px solid rgba(232,168,56,0.18)',
+            }}>
+              <div style={{ height: '172px', overflow: 'hidden', position: 'relative' }}>
+                <img src={p.src} alt={p.caption} loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
+                  onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.06)'}
+                  onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <div style={{
+                  position: 'absolute', top: '0.625rem', left: '0.625rem',
+                  background: 'rgba(44,24,16,0.72)', backdropFilter: 'blur(6px)',
+                  color: 'var(--gold-light)',
+                  fontFamily: 'var(--font-accent)', fontSize: '0.58rem', letterSpacing: '0.1em',
+                  padding: '0.2rem 0.55rem', borderRadius: '9999px',
+                }}>{p.tag}</div>
+              </div>
+              <div style={{ padding: '0.625rem 0.875rem 0.75rem', background: 'white' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '0.88rem', color: 'var(--brown)', lineHeight: 1.2 }}>
+                  {p.caption}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ─── Signature Dishes (Improvement #3: Featured Loaded Fries) ─── */
 function SignatureDishes() {
   const featuredDish = {
@@ -559,6 +742,7 @@ function SignatureDishes() {
       tag: 'VIRAL ON TIKTOK',
       image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=600&q=80&fit=crop',
       accent: 'var(--gold-dark)',
+      price: '$14.99',
     },
     {
       title: 'Carne Asada Tacos',
@@ -566,6 +750,7 @@ function SignatureDishes() {
       tag: 'DAILY FAVORITE',
       image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80&fit=crop',
       accent: 'var(--green)',
+      price: '$4.50 ea.',
     },
     {
       title: 'Chipaquiles Mixtos',
@@ -573,6 +758,7 @@ function SignatureDishes() {
       tag: 'BREAKFAST STAR',
       image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80&fit=crop',
       accent: 'var(--red-dark)',
+      price: '$13.99',
     },
     {
       title: 'Gorditas de Chicharrón',
@@ -580,6 +766,7 @@ function SignatureDishes() {
       tag: 'HOMEMADE',
       image: 'https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=600&q=80&fit=crop',
       accent: 'var(--brown-mid)',
+      price: '$5.99',
     },
   ]
 
@@ -597,7 +784,7 @@ function SignatureDishes() {
         </div>
 
         {/* Featured Loaded Fries — full-width horizontal card */}
-        <div className="observe-fade" style={{
+        <div className="observe-fade featured-dish-grid" style={{
           background: 'white', borderRadius: '1.5rem', overflow: 'hidden',
           boxShadow: '0 8px 40px rgba(44,24,16,0.13)',
           display: 'grid', gridTemplateColumns: '1fr 1fr',
@@ -629,9 +816,14 @@ function SignatureDishes() {
               fontFamily: 'var(--font-accent)', color: 'var(--gold-dark)', fontSize: '0.72rem',
               letterSpacing: '0.18em', marginBottom: '0.5rem',
             }}>THE LEGEND</div>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: 'var(--brown)', lineHeight: 1.1, marginBottom: '1rem' }}>
-              {featuredDish.title}
-            </h3>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap', marginBottom: '1rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', color: 'var(--brown)', lineHeight: 1.1 }}>
+                {featuredDish.title}
+              </h3>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', color: 'var(--red)', fontWeight: 600, flexShrink: 0 }}>
+                $15.99
+              </span>
+            </div>
             <p style={{ color: 'var(--brown-mid)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
               {featuredDish.desc}
             </p>
@@ -666,31 +858,65 @@ function SignatureDishes() {
                 }}>{d.tag}</div>
               </div>
               <div style={{ padding: '1.25rem 1.4rem 1.5rem' }}>
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--brown)', marginBottom: '0.4rem' }}>
-                  {d.title}
-                </h3>
+                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.2rem', color: 'var(--brown)' }}>
+                    {d.title}
+                  </h3>
+                  {d.price && (
+                    <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', color: 'var(--red)', fontWeight: 600, flexShrink: 0 }}>
+                      {d.price}
+                    </span>
+                  )}
+                </div>
                 <p style={{ color: 'var(--brown-mid)', fontSize: '0.85rem', lineHeight: 1.6 }}>{d.desc}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Responsive: stack featured card on mobile */}
-        <style>{`
-          @media (max-width: 640px) {
-            .featured-dish-grid { grid-template-columns: 1fr !important; }
-            .featured-dish-grid > div:first-child { height: 240px !important; }
-          }
-        `}</style>
+        {/* View Full Menu CTA */}
+        <div className="observe-fade" style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+          <a href="#menu"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              background: 'var(--red)', color: 'white',
+              padding: '0.875rem 2.25rem', borderRadius: '9999px',
+              fontWeight: 700, fontSize: '0.95rem',
+              boxShadow: '0 8px 24px rgba(181,40,30,0.32)',
+              transition: 'all 0.25s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 14px 36px rgba(181,40,30,0.42)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(181,40,30,0.32)' }}>
+            Explore Full Menu
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <p style={{ marginTop: '0.75rem', color: 'var(--brown-mid)', fontSize: '0.8rem' }}>
+            10 categories · 65+ items · breakfast through late night
+          </p>
+        </div>
       </div>
     </section>
   )
 }
 
-/* ─── Full Menu (Improvement #4: default tab = 'wings') ─── */
+/* ─── Full Menu (Improvement #4: Fan Favorites tab + First Timer callout) ─── */
 function FullMenu() {
-  const [activeTab, setActiveTab] = useState('wings')
-  const active = MENU_CATEGORIES.find(c => c.id === activeTab)
+  const popularItems = (() => {
+    const seen = new Set()
+    return MENU_CATEGORIES.flatMap(c =>
+      c.items.filter(i => i.popular).map(item => ({ ...item, _category: c.label }))
+    ).filter(item => {
+      if (seen.has(item.name)) return false
+      seen.add(item.name)
+      return true
+    })
+  })()
+  const menuWithFavorites = [
+    { id: 'popular', label: 'Fan Favorites', items: popularItems },
+    ...MENU_CATEGORIES,
+  ]
+  const [activeTab, setActiveTab] = useState('popular')
+  const active = menuWithFavorites.find(c => c.id === activeTab)
 
   return (
     <section id="menu">
@@ -707,8 +933,22 @@ function FullMenu() {
             </p>
           </div>
 
+          {/* First-timer callout */}
+          <div className="observe-fade" style={{
+            background: 'rgba(232,168,56,0.11)', border: '1px solid rgba(232,168,56,0.35)',
+            borderRadius: '0.875rem', padding: '0.875rem 1.25rem',
+            display: 'flex', alignItems: 'center', gap: '0.875rem',
+            marginBottom: '1.75rem', flexWrap: 'wrap',
+          }}>
+            <Sparkles size={18} style={{ color: 'var(--gold-dark)', flexShrink: 0 }} />
+            <p style={{ color: 'var(--brown)', fontSize: '0.875rem', lineHeight: 1.5, margin: 0 }}>
+              <span style={{ fontWeight: 700 }}>First time here? </span>
+              <span style={{ color: 'var(--brown-mid)' }}>Start with the Asada Loaded Fries, Mango Habanero Wings, and Chipaquiles Mixtos. Trust the regulars.</span>
+            </p>
+          </div>
+
           <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', paddingBottom: '1rem', marginBottom: '2rem', scrollbarWidth: 'none' }}>
-            {MENU_CATEGORIES.map(cat => (
+            {menuWithFavorites.map(cat => (
               <button key={cat.id} className={`menu-tab ${activeTab === cat.id ? 'active' : ''}`}
                 onClick={() => setActiveTab(cat.id)}>
                 {cat.label}
@@ -718,26 +958,48 @@ function FullMenu() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: '0.875rem' }}>
             {active?.items.map((item, i) => (
-              <div key={item.name}
-                className={`observe-fade delay-${Math.min(i + 1, 5)}`}
+              <div key={`${activeTab}-${item.name}`}
                 style={{
                   background: 'white', borderRadius: '0.875rem',
                   padding: '1.2rem 1.4rem',
                   boxShadow: '0 2px 10px rgba(44,24,16,0.055)',
                   borderLeft: item.popular ? '3px solid var(--gold)' : '3px solid transparent',
                   transition: 'box-shadow 0.2s',
+                  animation: `menuItemIn 0.32s ease ${Math.min(i, 8) * 0.045}s both`,
                 }}
                 onMouseEnter={e => e.currentTarget.style.boxShadow = '0 6px 22px rgba(44,24,16,0.11)'}
                 onMouseLeave={e => e.currentTarget.style.boxShadow = '0 2px 10px rgba(44,24,16,0.055)'}
               >
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', color: 'var(--brown)', marginBottom: '0.3rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  {item.name}
-                  {item.popular && (
+                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.3rem' }}>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', color: 'var(--brown)', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', flex: 1 }}>
+                    {item.name}
+                    {item.popular && activeTab !== 'popular' && (
+                      <span style={{
+                        fontFamily: 'var(--font-accent)', fontSize: '0.62rem', letterSpacing: '0.1em',
+                        color: 'var(--gold-dark)', background: 'rgba(232,168,56,0.12)',
+                        padding: '0.1rem 0.4rem', borderRadius: '4px',
+                      }}>POPULAR</span>
+                    )}
+                    {item.tag === 'WEEKEND' && (
+                      <span style={{
+                        fontFamily: 'var(--font-accent)', fontSize: '0.58rem', letterSpacing: '0.1em',
+                        color: 'var(--green)', background: 'rgba(26,71,49,0.1)',
+                        padding: '0.1rem 0.45rem', borderRadius: '4px',
+                      }}>WEEKEND</span>
+                    )}
+                    {activeTab === 'popular' && item._category && (
+                      <span style={{
+                        fontFamily: 'var(--font-accent)', fontSize: '0.58rem', letterSpacing: '0.1em',
+                        color: 'rgba(74,44,32,0.6)', background: 'rgba(44,24,16,0.06)',
+                        padding: '0.1rem 0.45rem', borderRadius: '4px',
+                      }}>{item._category}</span>
+                    )}
+                  </div>
+                  {item.price && (
                     <span style={{
-                      fontFamily: 'var(--font-accent)', fontSize: '0.62rem', letterSpacing: '0.1em',
-                      color: 'var(--gold-dark)', background: 'rgba(232,168,56,0.12)',
-                      padding: '0.1rem 0.4rem', borderRadius: '4px',
-                    }}>POPULAR</span>
+                      fontFamily: 'var(--font-display)', fontSize: '0.95rem',
+                      color: 'var(--red)', fontWeight: 600, flexShrink: 0,
+                    }}>{item.price}</span>
                   )}
                 </div>
                 <p style={{ color: 'var(--brown-mid)', fontSize: '0.82rem', lineHeight: 1.55 }}>{item.desc}</p>
@@ -746,7 +1008,7 @@ function FullMenu() {
           </div>
 
           <p style={{ textAlign: 'center', color: 'var(--brown-mid)', fontSize: '0.78rem', marginTop: '2.5rem', opacity: 0.65 }}>
-            Menu items and availability may vary by location. Call ahead for daily specials: (817) 386-5820
+            Prices shown are estimates · Menu items and availability may vary by location · Call ahead for current pricing & daily specials: (817) 386-5820
           </p>
         </div>
       </div>
@@ -791,10 +1053,10 @@ function StorySection() {
                 border: '2px solid rgba(232,168,56,0.2)',
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&fit=crop&crop=center"
-                  alt="Warm restaurant atmosphere"
+                  src="https://s3-media0.fl.yelpcdn.com/bphoto/H8QYbMSUwe79URPat97Pwg/l.jpg"
+                  alt="El Compadre Tacos — fresh tacos on a tray, made daily"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.88) saturate(1.15)' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 40%', filter: 'brightness(1.05) saturate(1.15)' }}
                 />
               </div>
 
@@ -948,7 +1210,15 @@ function TikTokStrip() {
   )
 }
 
-/* ─── Reviews (Improvement #7: bolder quote marks) ──────── */
+/* ─── Reviews (Improvement #7: bolder quote marks + reviewer avatars) ──────── */
+const AVATAR_BGS = ['#B5281E', '#1A4731', '#C48A22', '#8B1E15', '#235C3F', '#4A2C20']
+function getInitials(name) {
+  const parts = name.replace(/[&]/g, '').split(/\s+/).filter(p => p.length > 1)
+  if (parts.length === 0) return '?'
+  if (parts.length === 1) return parts[0][0].toUpperCase()
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
+}
+
 function Reviews() {
   return (
     <section id="reviews" style={{ background: 'var(--cream)', padding: '5rem 1.5rem' }}>
@@ -995,19 +1265,29 @@ function Reviews() {
               }}>
                 "{r.text}"
               </p>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontWeight: 600, color: r.highlight ? 'var(--gold-light)' : 'var(--brown)', fontSize: '0.82rem' }}>— {r.author}</span>
-                <span style={{
-                  fontSize: '0.7rem', color: r.highlight ? 'rgba(255,245,230,0.5)' : 'var(--brown-mid)',
-                  background: r.highlight ? 'rgba(255,245,230,0.08)' : 'var(--cream-dark)',
-                  padding: '0.18rem 0.55rem', borderRadius: '9999px',
-                }}>{r.source} Review</span>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                  <div className="reviewer-avatar" style={{
+                    background: AVATAR_BGS[i % AVATAR_BGS.length],
+                    border: r.highlight ? '2px solid rgba(232,168,56,0.5)' : '2px solid rgba(44,24,16,0.08)',
+                  }}>
+                    {getInitials(r.author)}
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 600, color: r.highlight ? 'var(--gold-light)' : 'var(--brown)', fontSize: '0.82rem', lineHeight: 1.2 }}>
+                      {r.author}
+                    </div>
+                    <div style={{ fontSize: '0.68rem', color: r.highlight ? 'rgba(255,245,230,0.45)' : 'var(--brown-mid)', marginTop: '0.1rem' }}>
+                      Verified {r.source} Reviewer
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="observe-fade" style={{ textAlign: 'center', marginTop: '2.75rem' }}>
+        <div className="observe-fade" style={{ textAlign: 'center', marginTop: '2.75rem', display: 'flex', flexWrap: 'wrap', gap: '0.875rem', justifyContent: 'center' }}>
           <a href="https://www.google.com/maps/search/El+Compadre+Tacos+Fort+Worth" target="_blank" rel="noopener noreferrer"
             style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
@@ -1018,6 +1298,18 @@ function Reviews() {
             onMouseEnter={e => { e.currentTarget.style.background = 'var(--red)'; e.currentTarget.style.color = 'white' }}
             onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--red)' }}>
             See All Reviews on Google <ExternalLink size={14} />
+          </a>
+          <a href="https://www.google.com/maps/search/El+Compadre+Tacos+Fort+Worth" target="_blank" rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
+              background: 'var(--cream-dark)', color: 'var(--brown-mid)',
+              border: '2px solid rgba(44,24,16,0.1)',
+              padding: '0.75rem 1.75rem', borderRadius: '9999px',
+              fontWeight: 600, fontSize: '0.9rem', transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--gold)'}
+            onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(44,24,16,0.1)'}>
+            <Star size={14} style={{ color: 'var(--gold)' }} /> Leave Us a Review
           </a>
         </div>
       </div>
@@ -1330,9 +1622,17 @@ function Footer() {
           display: 'flex', flexWrap: 'wrap', gap: '0.5rem',
           justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem',
         }}>
-          <span>© 2025 El Compadre Tacos y Mas · Fort Worth, TX · (817) 386-5820</span>
+          <span>© 2026 El Compadre Tacos y Mas · Fort Worth, TX · (817) 386-5820</span>
           <span style={{ color: 'rgba(255,245,230,0.35)' }}>
-            Website by <span style={{ color: 'var(--gold)', opacity: 0.7 }}>OakWind Studio</span>
+            Website by{' '}
+            <a
+              href="https://oakwindstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--gold)', opacity: 0.75, textDecoration: 'none', transition: 'opacity 0.2s' }}
+              onMouseEnter={e => e.currentTarget.style.opacity = '1'}
+              onMouseLeave={e => e.currentTarget.style.opacity = '0.75'}
+            >OakWind Studio</a>
           </span>
         </div>
       </div>
@@ -1406,6 +1706,8 @@ export default function App() {
       <Nav />
       <Hero />
       <SocialProofTicker />
+      <WhySection />
+      <PhotoGallery />
       <SignatureDishes />
       <FullMenu />
       <StorySection />
